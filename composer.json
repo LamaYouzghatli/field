@@ -3,14 +3,14 @@
   "description": "easy way to build your forms in laravel5",
   "license": "MIT",
   "keywords": ["laravel","forms"],
-  "minimum-stability " : "dev",
   "authors": [
     {
       "name": "Abdullah Ibn Farouk",
       "email": "eng.magwad@gmail.com"
     }
   ],
-  "minimum-stability": "stable",
+  "minimum-stability" : "dev",
+  "prefer-stable" : true,
   "require": {
     "illuminate/support": "^5.4",
     "nesbot/carbon": "~1.21",
