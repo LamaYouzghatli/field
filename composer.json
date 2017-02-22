@@ -9,9 +9,9 @@
       "email": "eng.magwad@gmail.com"
     }
   ],
-  "minimum-stability" : "dev",
-  "prefer-stable" : true,
+  "minimum-stability" : "stable",
   "require": {
+    "php": ">=5.6.4",
     "illuminate/support": "^5.4",
     "nesbot/carbon": "~1.21",
     "laravelcollective/html":"^5.4.0"
