@@ -1,0 +1,23 @@
+{
+  "name": "ibnfarouk/field",
+  "description": "easy way to build your forms in laravel5",
+  "license": "MIT",
+  "keywords": ["laravel","forms"],
+  "authors": [
+    {
+      "name": "Abdullah Ibn Farouk",
+      "email": "eng.magwad@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "illuminate/support": "^5.4",
+    "nesbot/carbon": "~1.21",
+    "laravelcollective/html":"^5.4.0"
+  },
+  "autoload" : {
+    "psr-4" : {
+      "Ibnfarouk\\Field\\" : "src/"
+    }
+  }
+}
