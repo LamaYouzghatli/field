@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Ibnfarouk\Field;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,6 +23,9 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('field', function()
+        {
+            return new \Ibnfarouk\Field\Field;
+        });
     }
 }
