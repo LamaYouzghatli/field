@@ -13,7 +13,11 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->loadViewsFrom(__DIR__.'/views', 'field');
+
+//        $this->publishes([
+//            __DIR__.'/views' => resource_path('views/vendor/field'),
+//        ]);
     }
 
     /**
@@ -23,9 +27,6 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('field', function()
-        {
-            return new \Ibnfarouk\Field\Field;
-        });
+        //
     }
 }

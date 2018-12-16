@@ -11,6 +11,9 @@ use Form;
  */
 class Field
 {
+    public function isDeferred(){
+        return false;
+    }
     public static $months = [
         "1" => 'يناير',
         "2" => 'فبراير',
@@ -80,19 +83,7 @@ class Field
      */
     public static function text($name, $label, $value = null)
     {
-        return ' 
-			<div class="form-group ' . static::hasError($name) . '" id="' . $name . '_wrap">
-		        <label for="' . $name . '">' . $label . '</label>
-		        <div class="">
-		             ' . Form::text($name, $value, [
-            "placeholder" => $label,
-            "class" => "form-control",
-            "id" => $name
-        ]) . '
-		        </div>
-		        ' . static::getError($name) . '
-		    </div>
-		';
+        return view('field::text',compact('name','label','value'))->render();
     }
 
     /**
@@ -100,20 +91,9 @@ class Field
      * @param $label
      * @return string
      */
-    public static function number($name, $label)
+    public static function number($name, $label,$value=null)
     {
-        return '
-			<div class="form-group ' . static::hasError($name) . '" id="' . $name . '_wrap">
-		        <label for="' . $name . '">' . $label . '</label>
-		        <div class="">
-		             ' . Form::number($name, null, [
-            "class" => "form-control",
-            "id" => $name
-        ]) . '
-		        </div>
-		        ' . static::getError($name) . '
-		    </div>
-		';
+        return view('field::number',compact('name','label','value'))->render();
     }
 
     /**
@@ -123,18 +103,7 @@ class Field
      */
     public static function email($name, $label)
     {
-        return ' 
-			<div class="form-group ' . static::hasError($name) . '" id="' . $name . '_wrap">
-		        <label for="' . $name . '">' . $label . '</label>
-		        <div class="">
-		             ' . Form::email($name, null, [
-            "class" => "form-control",
-            "id" => $name
-        ]) . '
-		        </div>
-		        ' . static::getError($name) . '
-		    </div>
-		';
+        return view('field::email',compact('name','label','value'))->render();
     }
 
     /**
@@ -144,18 +113,7 @@ class Field
      */
     public static function password($name, $label)
     {
-        return ' 
-			<div class="form-group ' . static::hasError($name) . '" id="' . $name . '_wrap">
-		        <label for="' . $name . '">' . $label . '</label>
-		        <div class="">
-		             ' . Form::password($name, [
-            "class" => "form-control",
-            "id" => $name
-        ]) . '
-		        </div>
-		        ' . static::getError($name) . '
-		    </div>
-		';
+        return view('field::password',compact('name','label'))->render();
     }
 
     /**
@@ -164,23 +122,12 @@ class Field
      * @param $plugin
      * @return string
      */
-    public static function dateOld($name, $label, $plugin = 'datepicker')
+    public static function datePicker($name, $label, $plugin = 'datepicker')
     {
-        return ' 
-			<div class="form-group ' . static::hasError($name) . '" id="' . $name . '_wrap">
-		        <label for="' . $name . '">' . $label . '</label>
-		        <div class="">
-		             ' . Form::text($name, null, [
-            "class" => "form-control " . $plugin,
-            "id" => $name
-        ]) . '
-		        </div>
-		        ' . static::getError($name) . '
-		    </div>
-		';
+        return view('field::datepicker',compact('name','label','value'))->render();
     }
 
-    public static function date($name, $label, $plugin = 'datepicker')
+    public static function dateGeorgian($name, $label, $plugin = 'datepicker')
     {
         return ' 
 			<div class="form-group ' . static::hasError($name) . '" id="' . $name . '_wrap">
@@ -284,19 +231,7 @@ class Field
      */
     public static function select($name, $label, $options, $plugin = 'select2', $placeholder = 'اختر قيمة', $selected = null)
     {
-        return '  
-			<div class="form-group ' . static::hasError($name) . '" id="' . $name . '_wrap">
-		        <label for="' . $name . '">' . $label . '</label>                              
-		        <div class="">
-					 ' . Form::select($name, $options, $selected, [
-            "class" => "form-control " . $plugin,
-            "id" => $name,
-            "data-placeholder" => $placeholder
-        ]) . '
-		        </div>
-		        ' . static::getError($name) . '
-		    </div>
-		';
+        return view('field::text',compact('name','label','value'))->render();
     }
 
     /**
