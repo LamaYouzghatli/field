@@ -4,7 +4,8 @@
         {!! Form::number($name, $value, [
         "placeholder" => $label,
         "class" => "form-control",
-        "id" => $name
+        "id" => $name,
+        "step" => "0.01"
         ]) !!}
     </div>
     <span class="help-block"><strong>{{$errors->first($name)}}</strong></span>

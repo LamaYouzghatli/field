@@ -99,9 +99,10 @@ class Field
     /**
      * @param $name
      * @param $label
+     * @param null $value
      * @return string
      */
-    public static function email($name, $label)
+    public static function email($name, $label,$value = null)
     {
         return view('field::email',compact('name','label','value'))->render();
     }

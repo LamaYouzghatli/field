@@ -2,8 +2,8 @@
     <label for="{{$name}}">{{$label}}</label>
     <div class="">
         {!! Form::select($name,$options,$value, [
-            "data-placeholder" => $placeholder,
-            "class" => "form-control".$plugin,
+            "placeholder" => $placeholder,
+            "class" => "form-control ".$plugin,
             "id" => $name
         ]) !!}
     </div>

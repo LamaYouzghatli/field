@@ -4,7 +4,8 @@
         {!! Form::textarea($name, $value, [
         "placeholder" => $label,
         "class" => "form-control",
-        "id" => $name
+        "id" => $name,
+        "rows" => 5
         ]) !!}
     </div>
     <span class="help-block"><strong>{{$errors->first($name)}}</strong></span>
