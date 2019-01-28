@@ -20,7 +20,7 @@
     "laravelcollective/html": "^5.4.0"
   },
   "autoload": {
-    "psr-2": {
+    "psr-0": {
       "Ibnfarouk\\Field": "src/"
     },
     "files": [
