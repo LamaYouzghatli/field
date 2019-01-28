@@ -20,11 +20,11 @@
     "laravelcollective/html": "^5.4.0"
   },
   "autoload": {
-  "psr-2": {
-    "Ibnfarouk\\Field": "src/"
-  },
-  "files": [
-    "src/Ibnfarouk/Field/functions.php"
-  ]
-},
+    "psr-2": {
+      "Ibnfarouk\\Field": "src/"
+    },
+    "files": [
+      "src/Ibnfarouk/Field/functions.php"
+    ]
+  }
 }
