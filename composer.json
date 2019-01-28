@@ -18,5 +18,13 @@
     "illuminate/support": "^5.4",
     "nesbot/carbon": "~1.21",
     "laravelcollective/html": "^5.4.0"
-  }
+  },
+  "autoload": {
+  "psr-2": {
+    "Ibnfarouk\\Field": "src/"
+  },
+  "files": [
+    "src/Ibnfarouk/Field/functions.php"
+  ]
+},
 }
