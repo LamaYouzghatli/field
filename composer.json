@@ -26,5 +26,15 @@
     "files": [
       "src/Ibnfarouk/Field/functions.php"
     ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ibnfrouk\\Field\\FieldServiceProvider"
+      ],
+      "aliases": {
+        "Field": "Ibnfrouk\\Field\\FieldFacade"
+      }
+    }
   }
 }
