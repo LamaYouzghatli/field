@@ -4,7 +4,7 @@ if (! function_exists('field')) {
 
     function field()
     {
-        $field = app('field');
+        $field = new Ibnfarouk\Field\Field;
         return $field;
     }
 
