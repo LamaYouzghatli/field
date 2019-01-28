@@ -27,6 +27,8 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+//        $this->app->singleton('field', function () {
+//            return $this->app->make('Ibnfarouk\Field\Field');
+//        });
     }
 }
